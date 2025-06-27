@@ -4,99 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>H Technologies Inc.</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      border-bottom: 1px solid #ddd;
-    }
-    header img {
-      max-width: 200px;
-      height: auto;
-    }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background: #fff;
-    }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.3em;
-      margin-top: 2rem;
-    }
-    .section {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-    .section .left {
-      flex: 1;
-      min-width: 300px;
-      padding-right: 1rem;
-    }
-    .section .right {
-      flex: 1;
-      min-width: 300px;
-    }
-    .section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="H Technologies Inc. ロゴ" />
-    <p>Always Higher.</p>
+    <!-- <img src="h-technologies-logo.PNG" alt="H Technologies Inc."  width="1024" height="auto"/> -->
+    <h1>H Technologies Inc.</h1>
+
+    <!-- 右側ナビ -->
+    <nav class="main-nav">
+      <!-- <a href="#work">Work</a> -->
+      <!-- <a href="#about">About</a> -->
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <h2>メンバー紹介</h2>
-    <div class="section">
+    
+    <!-- TOP -->
+    <div class="section top">
       <div class="left">
-        <h3>池田晃輝（Koki Ikeda）</h3>
-        <p>代表取締役 / Founder & CEO</p>
-        <p>
-          生成AIを活用した事業開発を推進。ソフトバンク所属、複数のAIプロジェクトを統括。<br>
-          「誰かが通った道ではなく、自ら道を切り拓きたい。」
-        </p>
+        <img src="h-logo.PNG" alt="H Technologies Inc."  class="h-logo"/>
       </div>
+
+      <!-- メンバー -->
       <div class="right">
-        <img src="ikeda.jpg" alt="池田晃輝の写真" />
+        <h2>Always&nbsp;Higher</h2>
+      </div>
+      
+    </div>
+    
+    <!-- ボードメンバー -->
+    <div class="section members">
+      <div class="left">
+        <h2>Board</h2>
+        <h2>Member</h2>      
+      </div>
+
+      <!-- メンバー -->
+      <div class="right">
+        <!-- 1人目 -->
+        <div class="member" data-name="池田 亘希" data-role="代表取締役CEO" data-bio="2020年にソフトバンク株式会社に入社。生成AIの事業開発マネージャーとして、医療・製薬・金融・広告といった業界向けの生成AIソリューションの企画・立ち上げに従事。アライアンスの交渉・締結や共同研究プロジェクトを主導し、生成AIの社会実装を推進。2025年3月、エイチテクノロジーズ株式会社を創業。金沢大学大学院 自然科学研究科 電子情報科学専攻 博士前期課程修了（工学修士）。">
+          <img src="ikeda.jpg" alt="池田亘希の写真" />
+          <h3 class="name">池田&nbsp;亘希</h3>
+          <p class="role">代表取締役CEO</p>
+        </div>
+        <!-- 2人目 -->
+        <div class="member" data-name="河戸 優典" data-role="取締役CTO" data-bio="2022年にソフトバンクへ入社。経済産業省のデジタルインフラ整備事業や、地方自治体における生成AIの社会実装を推進。また、スマート農業アプリケーション「e-kakashi」の開発・運用など多岐に渡る業務を経験。2025年3月、エイチテクノロジーズ株式会社を創業。立命館大学大学院  情報理工学研究科 情報理工学専攻修了。">
+          <img src="ikeda.jpg" alt="河戸優典の写真" />
+          <div class="name">河戸&nbsp;優典</div>
+          <div class="role">取締役CTO</div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- モーダル本体（普段は非表示） -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="m-name">
+      <div class="modal__content">
+        <button id="m-close" class="modal__close" aria-label="Close"></button>
+        <img id="m-photo" src="" alt="" />
+        <h3 id="m-name"></h3>
+        <p id="m-role"></p>
+        <p id="m-bio"></p>
       </div>
     </div>
 
-    <h2>会社概要</h2>
-    <div class="section">
+    <!-- 会社概要 -->
+    <div class="section company">
       <div class="left">
-        <img src="logo.png" alt="会社ロゴ" />
+        <!-- <img src="h-logo.png" alt="H"  width="96" height="auto"/> -->
+        <img src="h-technologies-logo.PNG" alt="H Technologies Inc."  class="h-technologies-logo"/>
       </div>
       <div class="right">
-        <ul>
-          <li><strong>会社名：</strong>H Technologies Inc.</li>
-          <li><strong>設立：</strong>2025年3月</li>
-          <li><strong>所在地：</strong>東京都港区</li>
-          <li><strong>事業内容：</strong>AIアプリ開発・保育支援サービス・コンサルティング</li>
-        </ul>
+        <div class="item">
+          <div class="label">Company Name</div>
+          <div class="value">エイチテクノロジーズ株式会社<wbr><span class="nowrap">（英名：H Technologies Inc.）</span></div>
+        </div>
+
+        <div class="item">
+          <div class="label">Founded</div>
+          <div class="value">2025年3月17日</div>
+        </div>
+
+        <div class="item">
+          <div class="label">Representative</div>
+          <div class="value">代表取締役&nbsp;CEO&nbsp;池田&nbsp;亘希</div>
+        </div>
+
+        <div class="item">
+          <div class="label">Office</div>
+          <div class="value">東京都港区浜松町1丁目2番15号<span class="nowrap">浜松町ダイヤビル2F</span></div>
+        </div>
+
+        <div class="item">
+          <div class="label">Contact</div>
+          <div class="value">info@h-technologies.co.jp</div>
+        </div>
       </div>
     </div>
+
+    <div class="section"></div>
+
   </main>
+  <footer>
+    <!-- <p>© 2025 H Technologies Inc.</p> -->
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
