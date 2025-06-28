@@ -27,3 +27,18 @@ modal.addEventListener('click',  e=>{
 document.addEventListener('keydown', e=>{
   if(e.key==='Escape') modal.classList.add('hidden');
 });
+
+const nav    = document.querySelector('.main-nav');
+const closeB = document.querySelector('.menu-close');
+
+nav.addEventListener('click', () => nav.classList.add('open'));
+closeB.addEventListener('click', e => {
+  e.stopPropagation();               // ボタン自体のバブリングを止める
+  nav.classList.remove('open');
+});
+
+/* パネル内リンクをクリックしたら閉じたい場合は↓を追加 */
+
+nav.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => nav.classList.remove('open'))
+);

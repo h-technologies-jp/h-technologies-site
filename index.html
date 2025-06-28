@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff">
   <title>H Technologies Inc.</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,10 +13,13 @@
     <h1>H Technologies Inc.</h1>
 
     <!-- 右側ナビ -->
-    <nav class="main-nav">
-      <!-- <a href="#work">Work</a> -->
-      <!-- <a href="#about">About</a> -->
-      <a href="#contact">Contact</a>
+    <nav class="main-nav" aria-label="Main menu">
+      <ul>
+        <button class="menu-close" aria-label="Close menu"></button>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -29,7 +33,7 @@
 
       <!-- メンバー -->
       <div class="right">
-        <h2>Always&nbsp;Higher</h2>
+        <h2>→Always&nbsp;Higher</h2>
       </div>
       
     </div>
@@ -50,7 +54,7 @@
           <p class="role">代表取締役CEO</p>
         </div>
         <!-- 2人目 -->
-        <div class="member" data-name="河戸 優典" data-role="取締役CTO" data-bio="2022年にソフトバンクへ入社。経済産業省のデジタルインフラ整備事業や、地方自治体における生成AIの社会実装を推進。また、スマート農業アプリケーション「e-kakashi」の開発・運用など多岐に渡る業務を経験。2025年3月、エイチテクノロジーズ株式会社を創業。立命館大学大学院  情報理工学研究科 情報理工学専攻修了。">
+        <div class="member" data-name="河戸 優典" data-role="取締役CTO" data-bio="2022年にソフトバンクへ入社。経済産業省のデジタルインフラ整備事業や、地方自治体における生成AIの社会実装を推進。また、スマート農業アプリケーション「e-kakashi」の開発・運用など多岐に渡る業務を経験。2025年3月、エイチテクノロジーズ株式会社を創業。立命館大学大学院 情報理工学研究科 情報理工学専攻修了（情報学修士）。">
           <img src="ikeda.jpg" alt="河戸優典の写真" />
           <div class="name">河戸&nbsp;優典</div>
           <div class="role">取締役CTO</div>
@@ -103,8 +107,6 @@
         </div>
       </div>
     </div>
-
-    <div class="section"></div>
 
   </main>
   <footer>

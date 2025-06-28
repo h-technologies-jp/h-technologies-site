@@ -1,36 +1,107 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    margin: 0;
+    margin: 2rem 0 0 0;
     padding: 0;
     background: #ffffff;
     color: #1A1A1A;
 }
+
 header {
     display: flex;
     align-items: center;      /* 垂直中央揃え */
-    justify-content: space-between; /* 左右に分散 */
+    justify-content: space-between;
     background: #fff;
     text-align: left;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0rem;
+    margin: 0 1rem;
+    position: fixed;
+    top: 0;            /* 画面上端に張り付ける */
+    left:0;                       /* ← 追加 */
+    right:0;
+    z-index: 999;      /* コンテンツより前面に出す */
+    border-bottom: 1px solid #1A1A1A;
 }
 header h1 {
     font-weight: 400;
-    font-size: max(18px, 2.2vw);
+    font-size: max(18px, 2vw);
     padding: 0;
     margin: 0;
     color: #1A1A1A;
 }
-.main-nav a{
-    font-size: max(18px, 2.2vw);
-    margin-left: 24px;        /* 左に空けて横並び間隔 */
-    text-decoration: none;
-    color: #1A1A1A;
-    font-weight: 400;
-    transition: opacity .2s;
+
+.main-nav {
+  /* 好きなサイズ */
+  --btn: max(32px, 3vw);
+
+  width: var(--btn);
+  height: var(--btn);
+  background: #000;
+  border: none;
+  cursor: pointer;
+  position: relative;
 }
-.main-nav a:hover{
-    opacity: .7;
+
+/* ───────── ② スライドパネル ───────── */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: calc(var(--btn) + 0.5rem) 1.5rem 1.5rem;  /* 上をボタン高さぶん空ける */
+
+  /* パネル全体の見た目 */
+  position: fixed;
+  top: 0; right: 0;
+  width: clamp(200px, 70vw, 340px);   /* 240〜340px の間で可変 */
+  height: 100vh;
+  background: #fff;
+  border-left: 1px solid #1A1A1A;
+
+  /* 初期は右へ退避 */
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 999;                       /* ボタンより下で OK */
 }
+
+.main-nav ul a {
+  margin: 0; padding: 0;
+  font-size: 2rem;                  /* リンクのフォントサイズ */
+  font-weight: 400;
+}
+
+/* ③ 開いた状態（JS が .open を付ける） */
+.main-nav.open ul { transform: translateX(0); }
+
+/* ④ パネル内リンク */
+.main-nav ul li + li { margin-top: 1rem; }
+.main-nav ul a {
+  color: #1A1A1A;
+  text-decoration: none;
+}
+
+/* ───────── ⑤ 閉じるボタン (X) ───────── */
+.menu-close{
+position:absolute; top:12px; right:12px;
+/* サイズはお好みで。幅＝高さの正方形にしておくと扱いやすい */
+width:42px; height:42px;
+background:none; border:none; cursor:pointer;
+padding:0;
+}
+
+/* ★「細いバツ」を描く線★ */
+.menu-close::before,
+.menu-close::after{
+content:'';
+position:absolute; top:50%; left:50%;
+width:32px;              /* 線の長さ */
+height:1px;              /* ここが“線の細さ” → 1px〜3pxで調整可 */
+background:#1A1A1A;      /* 線の色 */
+transform-origin:center;
+}
+
+/* 45° と -45° に回転させてバツにする */
+.menu-close::before{ transform:translate(-50%,-50%) rotate(45deg); }
+.menu-close::after { transform:translate(-50%,-50%) rotate(-45deg); }
+
+
 header img {
     max-width: 400px;
     width: 100%;
@@ -49,10 +120,10 @@ h2 {
 }
 
 .section {
-    border-top: 1px solid #1A1A1A;
+    border-bottom: 1px solid #1A1A1A;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 1rem;
+    padding-top: 10px;
 }
 .top {
     min-height: 480px;
@@ -68,6 +139,7 @@ h2 {
     font-size: clamp(3rem, 8vw, 5rem);
     margin: 0;  
 }
+
 .section .left {
     flex: 1;
     min-width: 300px;
@@ -81,30 +153,30 @@ h2 {
     max-width: 300px;
     width: 100%;
     height: auto;
-    padding: 7px 0 20px 0;
+    padding: 0 0 20px 0;
 }
 .h-logo {
-    max-width: 200px;
+    /* max-width: 200px; */
+    width: max(180px, 20vw);
     height: auto;
 }
 
 .members {
-    margin-bottom: 1.5rem;
     padding-bottom: 1rem;
 }
 .members .left {
     padding-bottom: 50px;
 }
 .members .left h2 {
+    line-height: 0.8;
     font-weight: 300;
     font-size: 5rem;
-    margin: 0 0 -1.5rem;
 }
 .members .right{
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     gap: 1rem;          /* 行間 40px、列間 64px */
     min-height: 480px;
 }
@@ -116,7 +188,7 @@ h2 {
     padding: 0 0 30px;
 }
 .member img {
-    min-width: 200px;
+    min-width: 120px;
     width: 100%;
     height: auto;
     display: block;
@@ -135,11 +207,11 @@ h2 {
     font-size: 0.9rem;
 }
 .company {
-    /* margin-bottom: 1.5rem; */
+    padding-bottom: 10px;
     
 }
 .company .item {
-    padding: 10px 0 5px 0;
+    padding: 0 0 15px 0;
 }
 .company .item .label{
     font-weight: 400;
@@ -155,12 +227,16 @@ h2 {
 .nowrap{
     display:inline-block;  /* または white-space:nowrap; */
 }
+footer {
+    padding: 0px;
+    padding-bottom: 1rem;
+}
 footer p {
     text-align: center;
     font-size: 0.8rem;
     color: #9e9e9e;
     padding: 0px;
-    margin: 6px;
+    margin: 0px;
 }
 
 /* モーダル */
@@ -179,24 +255,24 @@ footer p {
 }
 @keyframes pop{ from{transform:scale(.8);opacity:0;} to{transform:scale(1);opacity:1;} }
 
-    .modal__close{
-    position:absolute; top:12px; right:12px;
-    /* サイズはお好みで。幅＝高さの正方形にしておくと扱いやすい */
-    width:42px; height:42px;
-    background:none; border:none; cursor:pointer;
-    padding:0;
-    }
+.modal__close{
+position:absolute; top:12px; right:12px;
+/* サイズはお好みで。幅＝高さの正方形にしておくと扱いやすい */
+width:42px; height:42px;
+background:none; border:none; cursor:pointer;
+padding:0;
+}
 
-    /* ★「細いバツ」を描く線★ */
-    .modal__close::before,
-    .modal__close::after{
-    content:'';
-    position:absolute; top:50%; left:50%;
-    width:32px;              /* 線の長さ */
-    height:1px;              /* ここが“線の細さ” → 1px〜3pxで調整可 */
-    background:#1A1A1A;      /* 線の色 */
-    transform-origin:center;
-    }
+/* ★「細いバツ」を描く線★ */
+.modal__close::before,
+.modal__close::after{
+content:'';
+position:absolute; top:50%; left:50%;
+width:32px;              /* 線の長さ */
+height:1px;              /* ここが“線の細さ” → 1px〜3pxで調整可 */
+background:#1A1A1A;      /* 線の色 */
+transform-origin:center;
+}
 
 /* 45° と -45° に回転させてバツにする */
 .modal__close::before{ transform:translate(-50%,-50%) rotate(45deg); }
@@ -217,7 +293,7 @@ footer p {
     margin: 0 0 8px 0;
 }
 #m-bio{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 1.5rem 0 0 0;
     text-align: left;      /* ← 左寄せにする */
