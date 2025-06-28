@@ -242,7 +242,7 @@ footer p {
 /* モーダル */
 .modal{
     position:fixed; inset:0;
-    background:rgba(0,0,0,.5);
+    /* background:rgba(0,0,0,.5); */
     display:flex; justify-content:center; align-items:center;
     z-index:1000;
 }
@@ -252,6 +252,7 @@ footer p {
     background:#fff; padding:52px 32px; border-radius:0px;
     width:min(75%, 600px); text-align:center; position:relative;
     animation:pop .25s ease;
+    border: 1px solid #1A1A1A;
 }
 @keyframes pop{ from{transform:scale(.8);opacity:0;} to{transform:scale(1);opacity:1;} }
 
