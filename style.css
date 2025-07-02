@@ -30,7 +30,7 @@ header a {
     padding: 0;
     margin: 0;
 }
-header img {
+header .header-logo {
     width: auto;
     max-height: 30px;
     padding: 0;
