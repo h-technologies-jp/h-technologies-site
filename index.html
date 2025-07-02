@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fff">
+
   <!-- ▼ Open Graph（OGP） -->
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="H Technologies Inc.">
@@ -20,18 +21,22 @@
   <title>H Technologies Inc.</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
-    <!-- <img src="h-technologies-logo.PNG" alt="H Technologies Inc."  width="1024" height="auto"/> -->
-    <h1>H Technologies Inc.</h1>
+    <a href="index.html">
+      <img src="h-technologies-logo.PNG" alt="H Technologies Inc."/>
+    </a>
+    <!-- <h1>H Technologies Inc.</h1> -->
 
     <!-- 右側ナビ -->
     <nav class="main-nav" aria-label="Main menu">
       <ul>
         <button class="menu-close" aria-label="Close menu"></button>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Top</a></li>
+        <!-- <li><a href="#work">Service</a></li> -->
+        <!-- <li><a href="#about">About</a></li> -->
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -44,12 +49,26 @@
         <img src="h-logo.png" alt="H Technologies Inc."  class="h-logo"/>
       </div>
 
-      <!-- メンバー -->
+      <!-- Keyword -->
       <div class="right">
         <h2>→Always&nbsp;Higher</h2>
       </div>
       
     </div>
+      
+    
+
+    <!-- 事業内容 -->
+    <!-- <div class="section work" id="work"> -->
+      <!-- <div class="left"> -->
+        <!-- <h2>Service</h2> -->
+      <!-- </div> -->
+
+      <!-- 事業内容 -->
+      <!-- <div class="right"> -->
+        <!-- <p>エイチテクノロジーズ株式会社は、生成AIを活用したソリューションの開発・提供を行う企業です。医療・製薬・金融・広告などの業界向けに、生成AIを活用したソリューションを提供し、社会実装を推進しています。</p> -->
+      <!-- </div>  -->
+    <!-- </div> -->
     
     <!-- ボードメンバー -->
     <div class="section members">
@@ -76,7 +95,7 @@
 
     </div>
     
-    <!-- モーダル本体（普段は非表示） -->
+    <!-- Memberモーダル -->
     <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="m-name">
       <div class="modal__content">
         <button id="m-close" class="modal__close" aria-label="Close"></button>
@@ -99,7 +118,7 @@
         </div>
 
         <div class="item">
-          <div class="label">Founded</div>
+          <div class="label">Established</div>
           <div class="value">2025年3月17日</div>
         </div>
 
@@ -109,7 +128,17 @@
         </div>
 
         <div class="item">
-          <div class="label">Office</div>
+          <div class="label">Business Description</div>
+          <div class="value">アプリケーションの企画、設計、開発、販売及び保守並びにそれらに関するコンサルティング業務</div>
+        </div>
+
+        <div class="item">
+          <div class="label">Capital</div>
+          <div class="value">100万円（2025年7月現在）</div>
+        </div>
+
+        <div class="item">
+          <div class="label">Address</div>
           <div class="value">東京都港区浜松町1丁目2番15号 <span class="nowrap">浜松町ダイヤビル2F</span></div>
         </div>
 
@@ -121,11 +150,12 @@
     </div>
 
   </main>
+
   <footer>
     <!-- <p>© 2025 H Technologies Inc.</p> -->
   </footer>
 
   <script src="app.js"></script>
-  
+
 </body>
 </html>

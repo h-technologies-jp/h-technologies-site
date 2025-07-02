@@ -5,7 +5,10 @@ body {
     background: #ffffff;
     color: #1A1A1A;
 }
-
+p {
+    margin: 0;
+    padding: 0;
+}
 header {
     display: flex;
     align-items: center;      /* 垂直中央揃え */
@@ -20,6 +23,18 @@ header {
     right:0;
     z-index: 999;      /* コンテンツより前面に出す */
     border-bottom: 1px solid #1A1A1A;
+}
+header a {
+    text-decoration: none; /* リンクの下線を消す */
+    color: #1A1A1A;        /* リンクの色 */
+    padding: 0;
+    margin: 0;
+}
+header img {
+    width: auto;
+    max-height: 30px;
+    padding: 0;
+    margin-bottom: -0.4rem;
 }
 header h1 {
     font-weight: 400;
@@ -102,29 +117,36 @@ transform-origin:center;
 .menu-close::after { transform:translate(-50%,-50%) rotate(-45deg); }
 
 
-header img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-}
+
 main {
     /* max-width: 960px; */
     /* margin: 2rem auto; */
     padding: 0 1rem;
     background: #fff;
 }
-h2 {
-    margin: 0;
-    font-weight: 300;
-    font-size: 4rem;
-}
-
 .section {
     border-bottom: 1px solid #1A1A1A;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10px;
+    padding: 10px 0;
 }
+.section .left {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 1rem;
+    padding-bottom: 50px;
+}
+.section .left h2 {
+    margin: 0;
+    line-height: 0.8;
+    font-weight: 300;
+    font-size: 5rem;
+}
+.section .right {
+    flex: 1;
+    min-width: 300px;
+}
+
 .top {
     min-height: 480px;
 }
@@ -137,18 +159,11 @@ h2 {
 .top .right h2{
     text-align: right;     /* 右揃え */
     font-size: clamp(3rem, 8vw, 5rem);
-    margin: 0;  
+    margin: 0; 
+    font-weight: 300;;
 }
 
-.section .left {
-    flex: 1;
-    min-width: 300px;
-    padding-right: 1rem;
-}
-.section .right {
-    flex: 1;
-    min-width: 300px;
-}
+
 .section .h-technologies-logo {
     max-width: 300px;
     width: 100%;
@@ -165,27 +180,20 @@ h2 {
     padding-bottom: 1rem;
 }
 .members .left {
-    padding-bottom: 50px;
-}
-.members .left h2 {
-    line-height: 0.8;
-    font-weight: 300;
-    font-size: 5rem;
+    
 }
 .members .right{
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    /* padding-top: 10px; */
     gap: 1rem;          /* 行間 40px、列間 64px */
-    min-height: 480px;
+    min-height: 400px;
 }
 .member {
     flex: 1 1 45%;
     display: flex;
     flex-direction: column; /* 写真→名前→肩書き の縦並び */
     align-items: left;
-    padding: 0 0 30px;
 }
 .member img {
     min-width: 120px;
@@ -215,7 +223,7 @@ h2 {
 }
 .company .item .label{
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #1A1A1A;
 }
 .company .item .value{
@@ -300,4 +308,8 @@ transform-origin:center;
     text-align: left;      /* ← 左寄せにする */
     line-height: 1.6;
     white-space: pre-line;
+}
+
+.hidden {
+    display: none;
 }

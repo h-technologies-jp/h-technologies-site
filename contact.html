@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact | H Technologies Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- OGP / Twitter Card も忘れず追加すると共有時にカードが出ます -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact | H Technologies Inc." />
+  <meta property="og:description" content="お問い合わせ・ご相談はこちらから" />
+  <meta property="og:image" content="https://h-technologies.co.jp/h-technologies-logo-1200x630.jpg" />
+  <meta property="og:url" content="https://h-technologies.co.jp/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ページ専用の軽量スタイル（style.cssに書いてもOK） */
+    .contact-wrapper{max-width:640px;margin:4rem auto;padding:0 1rem;}
+    .contact-wrapper h2{font-size:2rem;margin-bottom:1rem;font-weight:400;text-align:center;}
+    form{display:grid;gap:1rem;}
+    label{display:flex;flex-direction:column;font-weight:600;font-size:.9rem;}
+    input,textarea{padding:.7rem;border:1px solid #ccc;border-radius:0px;font-size:1rem;}
+    textarea{min-height:140px;resize:vertical;}
+    button{padding:.8rem 1.2rem;border:none;border-radius:0px;background:#1A1A1A;color:#fff;font-size:1rem;cursor:pointer;}
+    button:hover{background:#323232;}
+  </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+        <img src="h-technologies-logo.PNG" alt="H Technologies Inc."/>
+        </a>
+        <!-- <h1>H Technologies Inc.</h1> -->
+
+        <!-- 右側ナビ -->
+        <nav class="main-nav" aria-label="Main menu">
+        <ul>
+            <button class="menu-close" aria-label="Close menu"></button>
+            <li><a href="index.html">Top</a></li>
+            <!-- <li><a href="#work">Service</a></li> -->
+            <!-- <li><a href="#about">About</a></li> -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="contact-wrapper">
+            <h2>Contact</h2>
+            <p style="text-align:center;">ご質問・お見積りのご依頼など、お気軽にご連絡ください。</p>
+
+            <form id="contact-form" action="https://formspree.io/f/mkgbeolg" method="POST">
+                <label>
+                    お名前
+                    <input type="text" name="name" required />
+                </label>
+
+                <label>
+                    メールアドレス
+                    <input type="email" name="email" required />
+                </label>
+
+                <label>
+                    件名
+                    <input type="text" name="subject" />
+                </label>
+
+                <label>
+                    メッセージ
+                    <textarea name="message" required></textarea>
+                </label>
+
+                <button type="submit">送信</button>
+            </form>
+            <!-- 完了メッセージ用プレースホルダ -->
+            <p id="form-result" class="hidden" style="margin-top:1rem;color:#1A1A1A;">
+                送信ありがとうございました。追ってご連絡いたします。
+            </p>
+        </div>
+    </main>
+
+    
+    <div id="modal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+        <div class="bg-white p-6 max-w-sm w-full relative">
+            <button id="m-close" class="absolute top-3 right-3" hidden></button>
+            <img id="m-photo" src="" alt="" class="w-32 h-32 object-cover rounded-full mx-auto">
+            <h3 id="m-name" class="text-xl font-semibold mt-4 text-center"></h3>
+            <p  id="m-role" class="text-sm text-gray-600 text-center"></p>
+            <p  id="m-bio"  class="mt-4 text-sm leading-relaxed"></p>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+    <script src="form.js"></script>
+
+</body>
+</html>
