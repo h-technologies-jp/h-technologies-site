@@ -257,8 +257,8 @@ footer p {
 .modal.hidden{ display:none; }
 
 .modal__content{
-    background:#fff; padding:52px 32px; border-radius:0px;
-    width:min(75%, 600px); text-align:center; position:relative;
+    background:#fff; padding:3rem 2rem 2rem 2rem; border-radius:0px;
+    width:min(70%, 500px); text-align:center; position:relative;
     animation:pop .25s ease;
     border: 1px solid #1A1A1A;
 }
@@ -287,7 +287,7 @@ transform-origin:center;
 .modal__close::before{ transform:translate(-50%,-50%) rotate(45deg); }
 .modal__close::after { transform:translate(-50%,-50%) rotate(-45deg); }
 
-.modal img{ width:90%; height:auto; border-radius:0%; margin-bottom:16px; }
+.modal img{ width:80%; height:auto; border-radius:0%; margin-bottom:16px; }
 
 #m-name {
     font-size: 2rem;
