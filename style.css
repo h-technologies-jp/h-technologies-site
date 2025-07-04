@@ -164,11 +164,11 @@ main {
 }
 
 .vision {
-    flex-direction: column;   /* ← これだけで縦並びに戻る */
-    align-items: center;      /* 横位置も中央寄せ */
-    text-align: center;       /* 行内テキストを中央揃え */
-    margin: 0 auto;        /* ブロック自体も中央に配置したい場合 */
-    padding: 4rem 1rem 4rem 1rem;    /* 余白調整 */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    /* padding: 4rem 1rem 4rem 1rem; */
 }
 
 .vision h3 {
@@ -181,7 +181,7 @@ main {
     margin: 0 auto !important;        /* ブロック自体も中央に配置したい場合 */
     font-size: 2.5rem;
     font-weight: 600;
-    padding: 10px 0 20px 0; /* 上下の余白を調整 */
+    /* padding: 10px 0 20px 0; */
 }
 
 .vision p {
@@ -192,12 +192,10 @@ main {
 }
 
 @media (max-width:600px){
-  #vision{padding:2rem 0;text-align:center;}
   #vision h3{font-size:clamp(1.2rem,4.5vw,1.6rem);}
-  #vision h2{font-size:clamp(1.2rem,5vw,2.4rem);text-wrap:balance;}
-  #vision p {font-size:clamp(.95rem,3vw,1.1rem);}
+  #vision p {font-size:clamp(16rem,3vw,1.1rem);}
   .nowrap {white-space:nowrap;}
-}
+} 
 
 
 .section .h-technologies-logo {
