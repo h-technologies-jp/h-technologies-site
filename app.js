@@ -30,41 +30,19 @@ document.addEventListener('keydown', e=>{
 
 
 // ナビゲーションメニュー
-document.addEventListener('DOMContentLoaded', () => {
-  const nav    = document.querySelector('.main-nav');
-  const closeB = document.querySelector('.menu-close');
 
-  if (!nav || !closeB) {
-    console.warn('要素が見つかりません');   // class 名ずれ検知用
-    return;
-  }
 
-  // 黒い四角をクリック → open
-  nav.addEventListener('click', () => nav.classList.add('open'));
+const nav    = document.querySelector('.main-nav');
+const closeB = document.querySelector('.menu-close');
 
-  // ✕ クリック → close
-  closeB.addEventListener('click', e => {
-    e.stopPropagation();
-    nav.classList.remove('open');
-  });
-
-  // メニュー内リンクを押したら閉じる
-  nav.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => nav.classList.remove('open'))
-  );
+nav.addEventListener('click', () => nav.classList.add('open'));
+closeB.addEventListener('click', e => {
+  e.stopPropagation();               // ボタン自体のバブリングを止める
+  nav.classList.remove('open');
 });
 
-// const nav    = document.querySelector('.main-nav');
-// const closeB = document.querySelector('.menu-close');
+/* パネル内リンクをクリックしたら閉じたい場合は↓を追加 */
 
-// nav.addEventListener('click', () => nav.classList.add('open'));
-// closeB.addEventListener('click', e => {
-//   e.stopPropagation();               // ボタン自体のバブリングを止める
-//   nav.classList.remove('open');
-// });
-
-// /* パネル内リンクをクリックしたら閉じたい場合は↓を追加 */
-
-// nav.querySelectorAll('a').forEach(a =>
-//   a.addEventListener('click', () => nav.classList.remove('open'))
-// );
+nav.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => nav.classList.remove('open'))
+);
