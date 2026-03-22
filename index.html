@@ -3,30 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#050505" />
 
-  <!-- ▼ Open Graph（OGP） -->
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="エイチテクノロジーズ株式会社">
-  <meta property="og:title"       content="エイチテクノロジーズ株式会社">
-  <meta property="og:description" content="エイチテクノロジーズ株式会社は、テクノロジーで日本を「上向き」にすることをミッションに、アプリケーション開発・コンサルティング事業などを展開するスタートアップです。">
-  <meta property="og:url"         content="https://h-technologies.co.jp/">
-  <meta property="og:image"       content="https://h-technologies.co.jp/h-technologies-logo-1200x630.JPG">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="エイチテクノロジーズ株式会社" />
+  <meta property="og:title" content="エイチテクノロジーズ株式会社" />
+  <meta property="og:description" content="エイチテクノロジーズ株式会社は、テクノロジーで日本を「上向き」にすることをミッションに、アプリケーション開発・コンサルティング事業などを展開するスタートアップです。" />
+  <meta property="og:url" content="https://h-technologies.co.jp/" />
+  <meta property="og:image" content="https://h-technologies.co.jp/img/h-technologies-logo-1200x630.JPG" />
 
-  <!-- ▼ Twitter Card（LINE も内部で参照することが多い） -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="エイチテクノロジーズ株式会社">
-  <meta name="twitter:description" content="エイチテクノロジーズ株式会社は、テクノロジーで日本を「上向き」にすることをミッションに、アプリケーション開発・コンサルティング事業などを展開するスタートアップです。">
-  <meta name="twitter:image"       content="https://h-technologies.co.jp/h-technologies-logo-1200x630.JPG">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="エイチテクノロジーズ株式会社" />
+  <meta name="twitter:description" content="エイチテクノロジーズ株式会社は、テクノロジーで日本を「上向き」にすることをミッションに、アプリケーション開発・コンサルティング事業などを展開するスタートアップです。" />
+  <meta name="twitter:image" content="https://h-technologies.co.jp/img/h-technologies-logo-1200x630.JPG" />
 
   <title>エイチテクノロジーズ株式会社 | H Technologies Inc.</title>
-  <meta name="description"
-        content="エイチテクノロジーズ株式会社は、テクノロジーで日本を「上向き」にすることミッションに、アプリケーション開発・コンサルティング事業などを展開するスタートアップです。" />
+  <meta name="description" content="エイチテクノロジーズ株式会社は、テクノロジーで日本を「上向き」にすることミッションに、アプリケーション開発・コンサルティング事業などを展開するスタートアップです。" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://h-technologies.co.jp/h-logo-512x512.png" sizes="512x512">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            xs: "480px"
+          },
+          fontFamily: {
+            sans: ["Space Grotesk", "Noto Sans JP", "sans-serif"],
+            display: ["Bebas Neue", "Space Grotesk", "sans-serif"]
+          },
+          colors: {
+            base: "#050505",
+            ink: "#f2f2f2"
+          }
+        }
+      }
+    };
+  </script>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="512x512" href="img/h-logo-512x512.png" />
+  <link rel="icon" type="image/png" href="img/h-logo-512x512.png" />
+  <link rel="shortcut icon" href="img/h-logo-512x512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="home.css" />
 
   <script type="application/ld+json">
     {
@@ -35,7 +57,7 @@
       "name": "エイチテクノロジーズ株式会社",
       "alternateName": "H Technologies Inc.",
       "url": "https://h-technologies.co.jp/",
-      "logo": "https://h-technologies.co.jp/h-technologies-logo-square.JPG",
+      "logo": "https://h-technologies.co.jp/img/h-technologies-logo-square.JPG",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -44,163 +66,186 @@
       }
     }
   </script>
-
 </head>
-
-<body>
-  <header>
-    <a href="index.html">
-      <img src="h-technologies-logo.PNG" alt="エイチテクノロジーズ株式会社" class="header-logo"/>
+<body class="home-page antialiased">
+  <header class="site-header">
+    <a class="brand-link" href="index.html" aria-label="H Technologies ホーム">
+      <img class="h-[17px] xs:h-[19px] md:h-[21px] lg:h-[24px] w-auto header-logo" src="img/h-technologies-logo.PNG" alt="エイチテクノロジーズ株式会社" />
     </a>
     <h1 hidden>エイチテクノロジーズ株式会社</h1>
 
-    <!-- 右側ナビ -->
     <nav class="main-nav" aria-label="Main menu">
-      <ul>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel">
+        <span></span>
+      </button>
+      <div class="nav-panel" id="nav-panel">
         <button class="menu-close" aria-label="Close menu"></button>
-        <li><a href="index.html">Top</a></li>
-        <!-- <li><a href="#">Service（準備中）</a></li> -->
-        <!-- <li><a href="#about">About</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul>
+          <li><a href="#top">Top</a></li>
+          <!-- <li><a href="#statement">Statement</a></li> -->
+          <li><a href="#service">Service</a></li>
+          <!-- <li><a href="#board">Board</a></li> -->
+          <!-- <li hidden><a href="#news">News</a></li> -->
+          <li><a href="#company">Company</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
-    
-    <!-- TOP -->
-    <div class="section top">
-      <div class="left">
-        <img src="h-logo.png" alt="Hロゴ"  class="h-logo"/>
+    <section class="section main-title !px-4 xs:!px-6 md:!px-10 lg:!px-16" id="top">
+      <div class="title-stack reveal max-w-[96vw] md:max-w-[88vw]">
+        <p class="title-caption text-[10px] xs:text-[11px] md:text-[13px]">H Technologies Inc.</p>
+        <h2><span>ALWAYS</span><span>HIGHER</span></h2>
       </div>
+      <a class="scroll-mark reveal delay-2" href="#statement"><span></span>SCROLL</a>
+    </section>
 
-      <!-- Keyword -->
-      <div class="right">
-        <h2>→Always&nbsp;Higher</h2>
+    <section class="section statement !px-4 xs:!px-6 md:!px-10 lg:!px-16" id="statement">
+      <p class="reveal max-w-[94vw] md:max-w-[90vw] lg:max-w-[82vw] text-[1.1rem] xs:text-[1.2rem] md:text-[1.45rem] lg:text-[1.75rem]">
+        30年間停滞している日本。<br />
+        先行きの見えない不安。<br />
+        未来に希望が持てない、そんな声も聞こえてきます。
+      </p>
+      <p class="reveal delay-1 max-w-[94vw] md:max-w-[90vw] lg:max-w-[82vw] text-[1.1rem] xs:text-[1.2rem] md:text-[1.45rem] lg:text-[1.75rem]">
+        この日本に、もう一度「成長の傾き」を取り戻したい。<br />
+        AIは、そのための起爆剤になり得ると信じています。<br />
+      </p>
+      <p class="reveal delay-2 max-w-[94vw] md:max-w-[90vw] lg:max-w-[82vw] text-[1.1rem] xs:text-[1.2rem] md:text-[1.45rem] lg:text-[1.75rem]">
+        私たちは、事業課題をAIで再定義し、<br />
+        現場に実装し切ることで、社会を前に進めます。<br />
+        今日より高い明日を、つくります。    
+      </p>
+      <p class="large reveal delay-3">AI時代の日本の未来を創る会社。</p>
+    </section>
+
+    <section class="section service !px-4 xs:!px-6 md:!px-10 lg:!px-16" id="service">
+      <div class="section-head reveal">
+        <p class="eyebrow">Service</p>
+        <h2>事業内容</h2>
       </div>
-      
-    </div>
-
-    <!-- Vision -->
-    <div class="section vision" id="vision">
-      <div class="left">
-        <h2>VISION</h2>
-        </div>
-
-      <div class="right">
-        <h3>テクノロジーで、<span class="nowrap">日本を「上向き」に</span></h3>
-        <p>30年間、ほとんど横ばいだった日本。<br>
-          <span class="nowrap">経済停滞、閉塞感、先行きの見えない不安——。</span><br>
-          ある調査では、18歳の85%が<span class="nowrap">「日本の将来は良くならない」と答えています。</span><br><br>
-
-          H&nbsp;Technologiesは、<span class="nowrap">この停滞にプラスの「傾き」をつくります。</span><br>
-          合言葉は、<span class="nowrap"><em>Always Higher&nbsp;—&nbsp;常に、より高く。</em></span><br>
-          現状維持ではなく、今日より高い明日を積み重ねる。<br><br>
-
-          「停滞する国」から「成長する国」へ。<br>
-          それが私たちのビジョンです。
-        </p>
+      <div class="project-list">
+        <article class="project-item reveal delay-1">
+          <p class="project-number">01</p>
+          <h3>AIプロダクト</h3>
+          <p>最先端テクノロジーを用いたAIネイティブなSaaSプロダクトを提供し、業界の生産性向上を支援します。</p>
+        </article>
+        <article class="project-item reveal delay-2">
+          <p class="project-number">02</p>
+          <h3>AI導入支援</h3>
+          <p>業務への効果的なAI導入を支援し、生産性の向上とコスト削減を実現します。</p>
+        </article>
+        <article class="project-item reveal delay-3">
+          <p class="project-number">03</p>
+          <h3>AIシステム開発</h3>
+          <p>企業の業務ニーズに合わせたAIシステムの開発・導入を支援し、効率的な業務遂行を実現します。</p>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <!-- 事業内容 -->
-    <!-- <div class="section work" id="work"> -->
-      <!-- <div class="left"> -->
-        <!-- <h2>Service</h2> -->
-      <!-- </div> -->
-
-      <!-- 事業内容 -->
-      <!-- <div class="right"> -->
-        <!-- <p>エイチテクノロジーズ株式会社は、生成AIを活用したソリューションの開発・提供を行う企業です。医療・製薬・金融・広告などの業界向けに、生成AIを活用したソリューションを提供し、社会実装を推進しています。</p> -->
-      <!-- </div>  -->
-    <!-- </div> -->
-    
-    <!-- ボードメンバー -->
-    <div class="section members">
-      <div class="left">
-        <h2>Board</h2>
-        <h2>Member</h2>      
+    <section class="section members" id="board" hidden>
+      <div class="section-head reveal">
+        <p class="eyebrow">Members</p>
+        <h2>Board Members</h2>
       </div>
-
-      <!-- メンバー -->
-      <div class="right">
-        <!-- 1人目 -->
-        <div class="member" data-name="池田 亘希" data-role="代表取締役CEO" data-bio="2020年に大手通信会社へ入社。生成AIの事業開発マネージャーとして、医療・製薬・金融・広告といった業界向けの生成AIソリューションの企画・立ち上げに従事。アライアンスの交渉・締結や共同研究プロジェクトを主導し、生成AIの社会実装を推進。2025年3月、エイチテクノロジーズ株式会社を創業。金沢大学大学院 自然科学研究科 電子情報科学専攻 博士前期課程修了（工学修士）。">
-          <img src="ikeda.JPG" alt="池田亘希の写真" />
-          <h3 class="name">池田&nbsp;亘希</h3>
-          <p class="role">代表取締役CEO</p>
-        </div>
-        <!-- 2人目 -->
-        <div class="member" data-name="河戸 優典" data-role="取締役CTO" data-bio="2022年に大手通信会社へ入社。経済産業省のデジタルインフラ整備事業や、地方自治体における生成AIの社会実装を推進。また、スマート農業アプリケーション「e-kakashi」の開発・運用など多岐に渡る業務を経験。2025年3月、エイチテクノロジーズ株式会社を創業。立命館大学大学院 情報理工学研究科 情報理工学専攻修了（情報学修士）。">
-          <img src="kawato.jpg" alt="河戸優典の写真" />
-          <div class="name">河戸&nbsp;優典</div>
-          <div class="role">取締役CTO</div>
-        </div>
+      <div class="member-grid">
+        <article class="member reveal delay-1" data-name="池田 亘希" data-role="代表取締役CEO" data-bio="2020年に大手通信会社へ入社。生成AIの事業開発マネージャーとして、医療・製薬・金融・広告といった業界向けの生成AIソリューションの企画・立ち上げに従事。アライアンスの交渉・締結や共同研究プロジェクトを主導し、生成AIの社会実装を推進。2025年3月、エイチテクノロジーズ株式会社を創業。金沢大学大学院 自然科学研究科 電子情報科学専攻 博士前期課程修了（工学修士）。">
+          <img src="img/ikeda.JPG" alt="池田亘希の写真" />
+          <div class="member-meta">
+            <h3 class="name">池田&nbsp;亘希</h3>
+            <p class="role">代表取締役CEO</p>
+            <p class="member-note">VIEW PROFILE</p>
+          </div>
+        </article>
+        <article class="member reveal delay-2" data-name="河戸 優典" data-role="取締役CTO" data-bio="2022年に大手通信会社へ入社。経済産業省のデジタルインフラ整備事業や、地方自治体における生成AIの社会実装を推進。また、スマート農業アプリケーション「e-kakashi」の開発・運用など多岐に渡る業務を経験。2025年3月、エイチテクノロジーズ株式会社を創業。立命館大学大学院 情報理工学研究科 情報理工学専攻修了（情報学修士）。">
+          <img src="img/kawato.jpg" alt="河戸優典の写真" />
+          <div class="member-meta">
+            <h3 class="name">河戸&nbsp;優典</h3>
+            <p class="role">取締役CTO</p>
+            <p class="member-note">VIEW PROFILE</p>
+          </div>
+        </article>
       </div>
+    </section>
 
-    </div>
-    
-    <!-- Memberモーダル -->
-    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="m-name">
-      <div class="modal__content">
-        <button id="m-close" class="modal__close" aria-label="Close"></button>
-        <img id="m-photo" src="" alt="" />
-        <h3 id="m-name"></h3>
-        <p id="m-role"></p>
-        <p id="m-bio"></p>
+    <section class="section news" id="news" hidden>
+      <div class="section-head reveal">
+        <p class="eyebrow">News</p>
+        <h2>Latest Updates</h2>
       </div>
-    </div>
+      <ul class="news-list">
+        <li class="reveal delay-1">
+          <time datetime="2026-03">2026.03</time>
+          <p>コーポレートサイトをリニューアルしました。</p>
+        </li>
+        <li class="reveal delay-2">
+          <time datetime="2025-07">2025.07</time>
+          <p>生成AI活用プロジェクトの開発支援を開始しました。</p>
+        </li>
+        <li class="reveal delay-3">
+          <time datetime="2025-03">2025.03</time>
+          <p>エイチテクノロジーズ株式会社を設立しました。</p>
+        </li>
+      </ul>
+    </section>
 
-    <!-- 会社概要 -->
-    <div class="section company">
-      <div class="left">
-        <img src="h-technologies-logo.PNG" alt="H Technologies Inc."  class="h-technologies-logo"/>
+    <section class="section company !px-4 xs:!px-6 md:!px-10 lg:!px-16" id="company">
+      <div class="section-head reveal">
+        <p class="eyebrow">Company</p>
+        <h2>会社概要</h2>
       </div>
-      <div class="right">
+      <div class="company-panel reveal delay-1">
         <div class="item">
           <div class="label">Company Name</div>
-          <div class="value">エイチテクノロジーズ株式会社<wbr><span class="nowrap">（英名：H Technologies Inc.）</span></div>
+          <div class="value">エイチテクノロジーズ株式会社（英名：H Technologies Inc.）</div>
         </div>
-
         <div class="item">
           <div class="label">Established</div>
-          <div class="value">2025年3月17日</div>
+          <div class="value">2025年3月10日</div>
         </div>
-
         <div class="item">
           <div class="label">Representative</div>
           <div class="value">代表取締役CEO&nbsp;池田&nbsp;亘希</div>
         </div>
-
         <div class="item">
           <div class="label">Business Description</div>
           <div class="value">アプリケーションの企画、設計、開発、販売及び保守並びにそれらに関するコンサルティング業務</div>
         </div>
-
-        <div class="item">
-          <div class="label">Capital</div>
-          <div class="value">100万円（2025年7月現在）</div>
-        </div>
-
         <div class="item">
           <div class="label">Address</div>
-          <div class="value">東京都港区浜松町2丁目2番15号 <span class="nowrap">浜松町ダイヤビル2F</span></div>
+          <div class="value">東京都港区浜松町2丁目2番15号 浜松町ダイヤビル2F</div>
         </div>
-
         <div class="item">
           <div class="label">Contact</div>
-          <div class="value">info@h-technologies.co.jp</div>
+          <div class="value"><a href="mailto:info@h-technologies.co.jp">info@h-technologies.co.jp</a></div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <section class="section cta-bottom !px-4 xs:!px-6 md:!px-10 lg:!px-16" id="contact-cta">
+      <div class="cta-panel reveal w-full md:w-[92%] lg:w-full">
+        <p class="cta-kicker">Contact</p>
+        <h2>お問い合わせはこちら</h2>
+        <a class="cta-link" href="contact.html">CONTACT FORM</a>
+      </div>
+    </section>
   </main>
 
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="m-name">
+    <div class="modal__content">
+      <button id="m-close" class="modal__close" aria-label="Close"></button>
+      <img id="m-photo" src="" alt="" />
+      <h3 id="m-name"></h3>
+      <p id="m-role"></p>
+      <p id="m-bio"></p>
+    </div>
+  </div>
+
   <footer>
-    <!-- <p>© 2025 H Technologies Inc.</p> -->
+    <p>© 2026 H Technologies Inc.</p>
   </footer>
 
   <script src="app.js"></script>
-
 </body>
 </html>

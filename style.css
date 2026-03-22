@@ -30,12 +30,7 @@ header a {
     padding: 0;
     margin: 0;
 }
-header .header-logo {
-    width: auto;
-    max-height: 30px;
-    padding: 0;
-    margin-bottom: -0.4rem;
-}
+
 header h1 {
     font-weight: 400;
     font-size: max(18px, 2vw);
