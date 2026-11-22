@@ -1,115 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#050505" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="エイチテクノロジーズ株式会社" />
-  <meta property="og:title" content="Contact | エイチテクノロジーズ株式会社" />
-  <meta property="og:description" content="エイチテクノロジーズ株式会社へのお問い合わせはこちらから。" />
-  <meta property="og:url" content="https://h-technologies.co.jp/contact.html" />
-  <meta property="og:image" content="https://h-technologies.co.jp/img/h-technologies-logo-1200x630.JPG" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact | エイチテクノロジーズ株式会社" />
-  <meta name="twitter:description" content="エイチテクノロジーズ株式会社へのお問い合わせはこちらから。" />
-  <meta name="twitter:image" content="https://h-technologies.co.jp/img/h-technologies-logo-1200x630.JPG" />
-
-  <title>Contact | エイチテクノロジーズ株式会社</title>
-  <meta name="description" content="エイチテクノロジーズ株式会社へのお問い合わせはこちらから。" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          screens: {
-            xs: "480px"
-          },
-          fontFamily: {
-            sans: ["Space Grotesk", "Noto Sans JP", "sans-serif"],
-            display: ["Bebas Neue", "Space Grotesk", "sans-serif"]
-          },
-          colors: {
-            base: "#050505",
-            ink: "#f2f2f2"
-          }
-        }
-      }
-    };
-  </script>
-
-  <link rel="icon" type="image/png" sizes="512x512" href="img/h-logo-512x512.png" />
-  <link rel="icon" type="image/png" href="img/h-logo-512x512.png" />
-  <link rel="shortcut icon" href="img/h-logo-512x512.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="home.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Contact | H Technologies</title>
+  <meta name="description" content="エイチテクノロジーズ株式会社へのお問い合わせ。事業や協業のご相談はこちらから。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="エイチテクノロジーズ株式会社">
+  <meta property="og:title" content="Contact | H Technologies">
+  <meta property="og:description" content="エイチテクノロジーズ株式会社へのお問い合わせ。事業や協業のご相談はこちらから。">
+  <meta property="og:url" content="https://h-technologies.co.jp/contact.html">
+  <meta property="og:image" content="https://h-technologies.co.jp/img/h-technologies-logo-1200x630.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/h-logo-512x512.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script defer src="site.js" onerror="document.documentElement.classList.remove('js')"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"エイチテクノロジーズ株式会社","alternateName":"H Technologies Inc.","url":"https://h-technologies.co.jp/","logo":"https://h-technologies.co.jp/img/h-technologies-logo-square.png","email":"info@h-technologies.co.jp"}</script>
 </head>
-<body class="home-page contact-page antialiased">
-  <header class="site-header">
-    <a class="brand-link" href="index.html" aria-label="H Technologies ホーム">
-      <img class="h-[17px] xs:h-[19px] md:h-[21px] lg:h-[24px] w-auto header-logo" src="img/h-technologies-logo.PNG" alt="エイチテクノロジーズ株式会社" />
-    </a>
-
-    <nav class="main-nav" aria-label="Main menu">
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel">
-        <span></span>
-      </button>
-      <div class="nav-panel" id="nav-panel">
-        <button class="menu-close" aria-label="Close menu"></button>
-        <ul>
-          <li><a href="index.html#top">Top</a></li>
-          <li><a href="index.html#service">Service</a></li>
-          <li><a href="index.html#company">Company</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="hd">
+    <a class="hd-logo" href="index.html" aria-label="H Technologies ホーム"><img src="img/h-technologies-logo.PNG" alt="H Technologies" width="926" height="150"></a>
+    <nav class="hd-nav" aria-label="メインナビゲーション"><a href="service.html">Service</a><a href="company.html">Company</a><a href="career.html">Career</a><a href="news.html">News</a></nav>
+    <a class="hd-cta" href="contact.html" aria-current="page">Contact</a>
+    <button class="hd-menu" type="button" aria-label="メニューを開く" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
   </header>
+  <nav class="mn" id="menu" aria-label="モバイルナビゲーション" inert>
+    <a href="service.html"><span class="label">01</span>Service</a><a href="company.html"><span class="label">02</span>Company</a><a href="career.html"><span class="label">03</span>Career</a><a href="news.html"><span class="label">04</span>News</a><a href="contact.html"><span class="label">05</span>Contact</a>
+    <p class="label">H Technologies Inc.</p>
+  </nav>
 
-  <main>
-    <section class="section contact-main !px-4 xs:!px-6 md:!px-10 lg:!px-16" id="top">
-      <div class="section-head reveal max-w-[96vw] md:max-w-[88vw] lg:max-w-[76vw]">
-        <p class="eyebrow">Contact</p>
-        <h2 class="!text-[52px] xs:!text-[68px] md:!text-[92px] lg:!text-[120px]">お問い合わせ</h2>
+  <main id="main">
+    <section class="contact">
+      <div class="contact-side dark">
+        <p class="label rv">05 — Contact</p>
+        <h1 class="ph-title rv" style="--d:1" lang="en">Contact</h1>
+        <p class="ph-jp rv" style="--d:2">お問い合わせ</p>
+        <p class="rv" style="--d:2">事業・協業に関するご相談など、お気軽にお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。</p>
+        <div class="contact-mail rv" style="--d:3"><span class="label">Mail</span><a href="mailto:info@h-technologies.co.jp">info@h-technologies.co.jp</a></div>
+        <div class="ribs" aria-hidden="true"></div>
       </div>
-      <p class="contact-lead reveal delay-1 text-[14px] xs:text-[15px] md:text-[16px] lg:text-[17px] leading-[1.9]">
-        ご質問・お見積りのご依頼など、お気軽にお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。
-      </p>
-
-      <form class="contact-form reveal delay-2 w-full md:w-[92%] lg:w-full" id="contact-form" action="https://formspree.io/f/mkgbeolg" method="POST">
-        <label class="field !grid !grid-cols-1 md:!grid-cols-[minmax(120px,180px)_minmax(0,1fr)] !gap-2 xs:!gap-3 md:!gap-6">
-          <span class="field-label text-[15px] xs:text-[16px] md:text-[18px]">Name</span>
-          <input class="text-[14px] xs:text-[15px] md:text-[16px]" type="text" name="name" autocomplete="name" required />
-        </label>
-        <label class="field !grid !grid-cols-1 md:!grid-cols-[minmax(120px,180px)_minmax(0,1fr)] !gap-2 xs:!gap-3 md:!gap-6">
-          <span class="field-label text-[15px] xs:text-[16px] md:text-[18px]">Email</span>
-          <input class="text-[14px] xs:text-[15px] md:text-[16px]" type="email" name="email" autocomplete="email" required />
-        </label>
-        <label class="field !grid !grid-cols-1 md:!grid-cols-[minmax(120px,180px)_minmax(0,1fr)] !gap-2 xs:!gap-3 md:!gap-6">
-          <span class="field-label text-[15px] xs:text-[16px] md:text-[18px]">Subject</span>
-          <input class="text-[14px] xs:text-[15px] md:text-[16px]" type="text" name="subject" />
-        </label>
-        <label class="field !grid !grid-cols-1 md:!grid-cols-[minmax(120px,180px)_minmax(0,1fr)] !gap-2 xs:!gap-3 md:!gap-6">
-          <span class="field-label text-[15px] xs:text-[16px] md:text-[18px]">Message</span>
-          <textarea class="min-h-[160px] xs:min-h-[170px] md:min-h-[190px] text-[14px] xs:text-[15px] md:text-[16px]" name="message" required></textarea>
-        </label>
-        <button class="contact-submit !w-full xs:!w-auto text-[18px] xs:text-[20px] md:text-[24px]" type="submit">SEND MESSAGE</button>
-      </form>
-      <p id="form-result" class="form-result hidden">お問い合わせありがとうございます。追ってご連絡いたします。</p>
+      <div class="contact-main">
+        <p class="label rv"><span>Contact form</span><span>お問い合わせフォーム</span></p>
+        <form id="contact-form" class="form rv" style="--d:1" action="https://formspree.io/f/mkgbeolg" method="POST">
+          <div class="field"><label for="name">お名前 <em>必須</em></label><input id="name" name="name" type="text" autocomplete="name" placeholder="山田 太郎" required></div>
+          <div class="field"><label for="email">メールアドレス <em>必須</em></label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required></div>
+          <div class="field"><label for="subject">件名</label><input id="subject" name="subject" type="text" placeholder="お問い合わせの件名"></div>
+          <div class="field"><label for="message">お問い合わせ内容 <em>必須</em></label><textarea id="message" name="message" rows="5" placeholder="ご相談内容をご記入ください" required></textarea></div>
+          <button class="btn" type="submit"><span>送信する</span><i aria-hidden="true">→</i></button>
+          <p id="form-result" class="form-result" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 H Technologies Inc.</p>
+  <footer class="ft">
+    <div class="ft-top">
+      <a class="ft-logo" href="index.html" aria-label="H Technologies ホーム"><img src="img/h-technologies-logo.PNG" alt="H Technologies" width="926" height="150" loading="lazy"></a>
+      <div>
+        <p class="label">Menu</p>
+        <nav class="ft-nav" aria-label="フッターナビゲーション"><a href="service.html">Service</a><a href="company.html">Company</a><a href="career.html">Career</a><a href="news.html">News</a><a href="contact.html">Contact</a></nav>
+      </div>
+      <div>
+        <p class="label">Office</p>
+        <p class="ft-info">エイチテクノロジーズ株式会社<br>東京都港区浜松町2丁目2番15号 浜松町ダイヤビル2F<br><a href="mailto:info@h-technologies.co.jp">info@h-technologies.co.jp</a></p>
+      </div>
+    </div>
+    <div class="ft-bottom label"><span>© 2026 H Technologies Inc.</span><a href="#main">Page top</a></div>
   </footer>
-
-  <script src="app.js"></script>
-  <script src="form.js"></script>
+  <script defer src="form.js"></script>
 </body>
 </html>
